@@ -61,18 +61,38 @@ console.log(evenEasyNubersArray)
 
 mediumNumbersArray = [1,3,5,2,10,6,4,9];
 
-const userChoiceEvenDOMElement = document.getElementById('even').checked;
 
-const userChoiceOddDOMElement = document.getElementById('odd').checked;
+const filterButtonDOMElement = document.getElementById('filter-button')
 
+const userChoiceEvenDOMElement = document.getElementById('even');
 
-
-
-const filteredMediumNumbersArray = filterByUserChoice(mediumNumbersArray)
-
-console.log(filteredMediumNumbersArray)
+const userChoiceOddDOMElement = document.getElementById('odd');
 
 
+
+
+
+
+
+filterButtonDOMElement.addEventListener('click', function(){
+
+
+    const filteredNumbersDOMELement = document.getElementById('new-numbers');
+
+    const filteredMediumNumbersArray = filterByUserChoice(mediumNumbersArray)
+
+    console.log(filteredMediumNumbersArray)
+
+
+    filteredNumbersDOMELement.innerHTML = 
+    `
+        <p>Numeri Filtrati:</p>
+
+        <p>${filteredMediumNumbersArray}</p>
+
+    `
+
+})
 
 
 
@@ -139,13 +159,13 @@ function filterByUserChoice(array){
     let userChoice
     let newArray = [];
 
-    if (userChoiceEvenDOMElement === true){
+    if (userChoiceEvenDOMElement.checked === true){
         userChoice = 'pari';
         console.log("l'utente ha scelto Pari");
         const evenMediumNumbersArray = filterEvenNumbersInArray(array)
         newArray = evenMediumNumbersArray
 
-    }else if (userChoiceOddDOMElement === true){
+    }else if (userChoiceOddDOMElement.checked === true){
         userChoice = 'dispari';
         console.log("l'utente ha scelto Dispari");
         const oddMediumNumbersArray = filterOddNumbersInArray(array)

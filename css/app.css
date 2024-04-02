@@ -11,12 +11,18 @@
 }
 
 
+/* Esercizio Array Medio  */
 
 
 .array-medium{
     margin: 100px 0;
     text-align: center;
 }
+
+.numeri{
+    margin-bottom: 30px;
+}
+
 
 #user-request{
     border: 1px solid black;
@@ -27,4 +33,17 @@
 
 .even-radio{
     margin: 0 30px;
+}
+
+#filter-button{
+    margin-top: 30px;
+    padding: 5px 10px;
+}
+
+#new-numbers{
+    margin-top: 30px;
+}
+
+#new-numbers p{
+    margin: 5px 0;
 }
