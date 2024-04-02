@@ -91,8 +91,32 @@ filterButtonDOMElement.addEventListener('click', function(){
         <p>${filteredMediumNumbersArray}</p>
 
     `
-
 })
+
+
+
+
+
+
+
+
+
+// Esercizio 3 → Array Medio Parte 2
+/*
+    Dati un numero intero e un array di numeri interi, creare una funzione che sia in grado di restituire un nuovo array contenente solo i numeri divisibili per il numero intero specificato
+*/
+
+
+let userNumber = 5;
+const arrayDiNumeri = [1,3,5,2,10,6,4,9];
+
+
+const arrayFiltrato = filterByModule(arrayDiNumeri, userNumber)
+
+console.log(arrayFiltrato)
+
+
+
 
 
 
@@ -145,6 +169,7 @@ function filterEvenNumbersInArray(array){
 
 
 
+// funzione che filtra un array di numeri e restituisce un array con solo numeri dispari
 function filterOddNumbersInArray(array){
 
     const newArray = array.filter((number) => number % 2 === 1)
@@ -155,6 +180,7 @@ function filterOddNumbersInArray(array){
 
 
 
+// funzione che permette di filtrare un array in base ad una scelta dell'utente e restituire un arrai con numeri pari o dispari, a seconda della scelta
 function filterByUserChoice(array){
     let userChoice
     let newArray = [];
@@ -174,4 +200,17 @@ function filterByUserChoice(array){
 
     return newArray
 }
+
+
+
+function filterByModule(array, module){
+
+    const newArray = array.filter((number) => number % module === 0)
+
+    return newArray
+}
+
+
+
+
 // ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ Mie Funzioni ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ \\
