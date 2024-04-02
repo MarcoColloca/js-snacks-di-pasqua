@@ -244,6 +244,7 @@ function filterByUserChoice(array){
 
 
 
+// funzione che permette di filtrare un array in base ad un modulo scelto e restituire un array di numeri divisibili per quel modulo
 function filterByModule(array, module){
 
     const newArray = array.filter((number) => number % module === 0)
