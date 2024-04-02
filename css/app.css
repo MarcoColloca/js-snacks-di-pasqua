@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+.array-medium{
+    margin: 100px 0;
+    text-align: center;
+}
+
+#user-request{
+    border: 1px solid black;
+    border-radius: 18px;
+    padding: 40px 0;
+}
+
+
+.even-radio{
+    margin: 0 30px;
+}

@@ -51,6 +51,42 @@ console.log(evenEasyNubersArray)
 
 
 
+// Esercizio 3 → Array Medio
+/*
+    Dato un array di numeri interi, creare una funzione che sia in grado di restituire un nuovo array con solo i numeri pari o solo i numeri dispari (su richiesta dell'utente)
+*/
+
+
+
+
+mediumNumbersArray = [1,3,5,2,10,6,4,9];
+
+const userChoiceEvenDOMElement = document.getElementById('even').checked;
+
+const userChoiceOddDOMElement = document.getElementById('odd').checked;
+
+
+
+
+const filteredMediumNumbersArray = filterByUserChoice(mediumNumbersArray)
+
+console.log(filteredMediumNumbersArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ Mie Funzioni ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ \\
 
 // funzione per trasformare una parola nella sua versione con alfabeto farfallino
@@ -86,4 +122,36 @@ function filterEvenNumbersInArray(array){
 
     return newArray
 };
+
+
+
+function filterOddNumbersInArray(array){
+
+    const newArray = array.filter((number) => number % 2 === 1)
+
+    return newArray
+};
+
+
+
+
+function filterByUserChoice(array){
+    let userChoice
+    let newArray = [];
+
+    if (userChoiceEvenDOMElement === true){
+        userChoice = 'pari';
+        console.log("l'utente ha scelto Pari");
+        const evenMediumNumbersArray = filterEvenNumbersInArray(array)
+        newArray = evenMediumNumbersArray
+
+    }else if (userChoiceOddDOMElement === true){
+        userChoice = 'dispari';
+        console.log("l'utente ha scelto Dispari");
+        const oddMediumNumbersArray = filterOddNumbersInArray(array)
+        newArray = oddMediumNumbersArray
+    }
+
+    return newArray
+}
 // ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ Mie Funzioni ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ \\
