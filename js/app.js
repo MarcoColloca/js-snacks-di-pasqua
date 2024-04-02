@@ -122,6 +122,47 @@ console.log(arrayFiltrato)
 
 
 
+// Esercizio 4 → Array Difficile
+/*
+    Dati un numero intero e un array di numeri interi, creare una funzione che sia in grado di restituire un nuovo array contenente solo i numeri divisibili per il numero intero specificato
+*/
+
+
+const arrayHard = [
+	{ name: "Marco", age: 22 },
+	{ name: "Anna", age: 24 },
+	{ name: "Luca", age: 17 },
+	{ name: "Gianni", age: 53 }
+];
+console.log(arrayHard)
+
+const sortedArrayByAge = arrayHard.toSorted((a, b) => a.age - b.age);
+console.log(sortedArrayByAge)
+
+
+
+const sortedArrayByName = arrayHard.toSorted(function(a,b){
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+
+    if(nameA < nameB){
+        return -1;
+    }
+
+    if(nameA > nameB){
+        return 1;
+    }
+
+
+    return 0
+
+});
+
+
+
+console.log(sortedArrayByName)
+
+
 
 
 
